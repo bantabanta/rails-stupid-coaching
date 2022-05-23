@@ -1,0 +1,14 @@
+<%# Display the question you ask your coach as well as his answer.
+The controller will need to read the question from params and compute an instance variable @answer for the view to display. Here are two requests that you should be able to handle: %>
+<br>
+<h1>Stupid Coaching</h1>
+
+<div class="answer_page" id="user_question">
+<p><b> <%= params[:question].capitalize %> </b></p>
+<p><i>     -- You</i></p>
+</div>
+<div class="answer_page" id="coach_answer">
+<p><b> <%= @answer %> </b></p>
+<p><i>    -- Coach</i></p>
+</div><br>
+<%= link_to "Ask a new question", ask_path %>
